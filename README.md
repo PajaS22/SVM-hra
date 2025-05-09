@@ -83,3 +83,5 @@ This will create:
 - Layouts: PNG files and a combined PDF in the layout directory.
 You're ready to print your custom cards!
 
+---
+*This project builds on Esther Alter's [CardCreator](https://github.com/subalterngames/CardCreator)*
