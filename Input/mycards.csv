@@ -1,0 +1,65 @@
+﻿HEADER TEXT;BODY TEXT;FG_IMAGE_FILE;BG_COLOR;FILENAME
+_SLIB & ZÁKON;;;;
+Slibový oheň;"+2 VB,\n+2 VB pokud máš ""Rozdělávání ohně""";slibak;purple;slibak
+Dobrý skutek každý den;+1 VB;1gooddeed;purple;dobry_skutek
+Večerní příběhy s ponaučením;+1 VB;kniha;purple;vecerni_pribehy
+Skautské desatero na nástěnku;"+2 VB\npodmínka: musíš mít ""Nástěnku u klubovny""";10zakonu;purple;desatero
+Program s otázkami o morálce;"+1 VB \n+2 VB pokud máš ""Vedoucí se chová podle slibu a zákona""";moralni_dilema;purple;moralka
+;;;;
+_UČENÍ SE ZKUŠENOSTÍ;;;;
+Stavba dřevěné věže;"+2 VB,\n+2 VB pokud máš ""Družinový duch""";vez;red;vez
+Rozdělávání ohně;+1 VB;rozdelavani_ohne;red;ohen
+Služby v kuchyni na táboře;+2 VB;sluzba_kuchyn;red;sluzba_kuchyn
+Vyřezávání totemů;+1 VB;totem;red;totem
+Výlet na kánoích;+1 VB;kanoe;red;kanoe
+;;;;
+_DRUŽINOVÝ SYSTÉM;;;;
+Družinová výprava;+2 VB;vyprava;blue;vyprava
+Družinový duch;+1 VB;duch;blue;duch
+Vymýšlení družinových pokřiků;+1 VB;pokrik;blue;pokrik
+Rádcovský kurz pro rádce a podrádce;"+4 VB \npodmínka: musíš mít ""Vedoucí jde dobrým příkladem""";radcovsky_kurz;blue;radcovsky_kurz
+Výroba družinových vlajek;+1 VB;vlajky;blue;vlajky
+;;;;
+_SYMBOLICKÝ RÁMEC;;;;
+Celotáborová hra;"+2 VB \n+2 VB pokud máš ""Vnitřní motivaci""";CTH;cyan;CTH
+Mrazík;+1 VB \n +1 dítě;snehulak;cyan;snehulak
+Rybičky rybičky rybáři jedou!;+1 VB \n +1 dítě;rybicky;cyan;rybicky
+Ranní nástup v krojích;+2 VB;nastup;cyan;nastup
+Zpívání večerky;+1 VB;vecerka;cyan;vecerka
+;;;;
+_PŘÍRODA;;;;
+Přespání pod celtou;+2 VB;celta;green;celta
+Výlet do lesa;+1 VB;les;green;les
+Patronáty;"+2 VB \n+1 VB pokud také máš ""Sázení stromů""";patronaty;green;patronaty
+Poznávačka rostlin a zvířat;+1 VB;poznavacka;green;poznavacka
+Odlévání stop;+1 VB;stopy;green;stopy
+;;;;
+_OSOBNÍ RŮST;;;;
+Program ze stezky;"+2 VB \npodmínka: musíš mít ""Vnitřní motivaci""";stezka;yellow;stezka
+Plnění odborek;"+2 VB \npodmínka: musíš mít ""Vnitřní motivaci""";odborky;yellow;odborky
+Roverské výzvy;"+1 VB \npodmínka: musíš mít ""Vnitřní motivaci""";3orlipera;yellow;3orlipera
+Vnitřní motivace;Jsi namotivovaný dělat cokoliv!;vnitrni_motivace;yellow;vnitrni_motivace
+Všestranný a pestrý program;"+2 VB \n navíc +2 děti pokud máš ""Webovky""";pestry_program;yellow;pestry_program
+;;;;
+_DOSPĚLÍ PRŮVODCI;;;;
+Vedoucí jde dobrým příkladem;+2 VB;dobry_priklad;magenta;dobry_priklad
+Vedoucí se chová podle slibu a zákona;+1 VB;slib_zakon;magenta;slib_zakon
+Vedoucí se účastní her;+1 VB \n+1 dítě;ucastni_se_her;magenta;ucastni_se_her
+Vedoucí zná své členy a zajímá se o jejich osobní život;+1 VB \n+1 dítě;vedouci_se_zajima;magenta;vedouci_se_zajima
+Vedoucí dává konstruktivní zpětnou vazbu;+1 VB;konstruktivni_kritika;magenta;konstruktivni_kritika
+;;;;
+_ZAPOJENÍ DO SPOLEČNOSTI;;;;
+Sázení stromů;"+1 VB \n+2 VB pokud máš ""Poznávačku rostlin a zvířat""";sazeni_stromu;orange;sazeni_stromu
+Prodávání magnetek v rámci Srdce dětem;"+1 VB \n+1 dítě pokud máš ""Webovky""";magnetky;orange;srdce_detem
+Návštěva muzea;+1 VB;muzeum;orange;muzeum
+Svíčky pro Ukrajinu;+2 VB;svicky;orange;svicky
+Betlémské světlo;+2 VB;betlemske_svetlo;orange;betlemske_svetlo
+;;;;
+_OSTATNÍ;;;;
+Nástěnka u klubovny;Rozvěsili jste náborové dokumenty.\n+2 děti;nastenka;lime;nastenka
+Webovky;Lze vás lépe dohledat. \n+2 děti;webovky;lime;webovky
+Nábor dětí;Udělali jste veřejnou akci.\n+3 děti;nabor_deti;lime;nabor_deti
+Sto bodů za kamaráda;Kdo přivede kamaráda, ten dostane sto bodů do celoročního bodování.\n+2 děti;100bodu;lime;100bodu
+Veřejné vystoupení na slavnostech;A další vystoupení předvede oddíl skautek!\n+2 děti;vystoupeni;lime;vystoupeni
+Účast na dni kroužků;Kdo si chce vyzkoušet zábavné skautské aktivity?\n+3 děti;den_krouzku;lime;den_krouzku
+Skautský ples;Všichni rádi tančí!\n+2 děti;ples;lime;ples

@@ -1,75 +1,85 @@
-# CardCreator
+# CardCreator Tutorial
 
-CardCreator is a simple Python script to create custom playing cards. It takes text and image data from a csv spreadsheet and combines it all into a single .png file. CardCreator is much more primitive than any image editing program BUT it makes iterating on a card game very fast. Rather than fussing around with every single image layer whenever you want to make a change, just edit the values of the csv and re-run the script. It can even output multiple copies of each card to pdf.
+## Overview
 
-## Instructions for non-programmers
-A lot of this looks a lot scarier than it is! But trust me, it might take a little while to setup, but it's easy to run afterwards.
+The `CardCreator` tool allows you to create custom cards from a CSV file and arrange them into printable layouts. Follow this tutorial to quickly set up and use the tool.
 
-A lot of the notes here require you to use terminal commands. For Windows users, this means going to the start menu, clicking the search bar, typing in `powershell` (without quotes), and hitting return. For Mac users, this means opening `terminal`. For Linux, it depends on your setup.
+---
 
-Whenever there are commands, just type them in and press enter. If you see something like `/path/to/file`, I don't mean that *literally*. Replace everything after the first `/` with the location of the file (for example: `/users/seth/Documents/CardCreator/`)
+## Step 1: Prepare Your Input Files
 
-Note that in Windows it doesn't matter whether you `uPpeR CAse` or not in the terminal, but it does on Mac or Linux.
+1. **CSV File**: Create a CSV file (`mycards.csv`) with the following columns:
+   - `HEADER TEXT`: The title of the card.
+   - `BODY TEXT`: The description or details of the card.
+   - `FG_IMAGE_FILE`: The name of the foreground image (without extension).
+   - `BG_COLOR`: The background color (e.g., `red`, `blue`, `green`).
+   - `FILENAME`: The output filename for the card (without extension).
 
-## Installation
+   Example:
 
-1. Get Python 2.7
-    a. Windows and Mac: https://www.python.org/download/releases/2.7/
-    b. Debian and Ubuntu: sudo apt-get install python
-    c. Windows: Set the Python path https://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windows-7
-2. Get pygame
-    a. Windows and Mac: https://www.pygame.org/download.shtml
-    b. Linux: `sudo easy_install pygame`
-3. Get fpdf:
-    a. Windows: `pip install fpdf`
-    b. Mac and Linux: `sudo pip install fpdf`
-4. Linux and Mac: make the script executable.
-```bash
-cd /path/to/script
-chmod +x CardCreator.py
+   | HEADER TEXT              | BODY TEXT                                          | FG_IMAGE_FILE | BG_COLOR | FILENAME       |
+   |--------------------------|---------------------------------------------------|---------------|----------|----------------|
+   | Slibový oheň             | +2 VB, +2 VB pokud máš "Rozdělávání ohně"         | slibak        | purple   | slibak         |
+   | Dobrý skutek každý den   | +1 VB                                             | 1gooddeed     | purple   | dobry_skutek   |
+
+2. **Images**: Place your foreground images in the `Input/Images/Foregrounds` directory.
+
+3. **Fonts**: Add any custom fonts to the `Input/Fonts` directory.
+
+## Step 2: Configure the Tool
+
+Edit the 'config.ini' file to set up your directories and card settings. Example:
+
+```ini
+input_dir=Input
+output_dir=Output
+csv_file=mycards.csv
+fonts_dir=Fonts
+images_dir=Images
+images_bg_dir=Backgrounds
+images_fg_dir=Foregrounds
+card_width=800
+card_height=600
+header_font_size=40
+body_font_size=20
+header_font=Arial.ttf
+body_font=Arial.ttf
+border_width=10
 ```
 
-## Setup
+## Step 3: Generate Cards
 
-### How to use the sample files.
-1. Move `Sample_Input.zip` into `Input/`
-2. Extract `Sample_Input.zip`
+Run the `SVM_CardCreator.py` script to create cards:
 
-### How to make your own cards.
+```python
+python [SVM_CardCreator.py](http://_vscodecontentref_/0)
+```
 
-#### 1. Set up the config file
+The cards will be saved as PNG files in the `Output` directory.
 
-| Parameter | Description |
-| --- | --- |
-| `header_font_size` | Size of the header font. |
-| `header_font` | File name for the header font (be sure to include the file extension). This file must be in `Input/Fonts` |
-| `header_y` | y (vertical) position of the the header text. 0 = the absolute top of the card.|
-| `fg_y` | y position of the foreground image.|
-| `body_font_size` | Size of the body font |
-| ` body_font` | File name for the body font (be sure to include the file extension). This file must be in `Input/Fonts` |
-| `body_y` | y position of the body text.
-| `body_width_percent` | The width of the body text as a percentage of the width of the card. (If this is less than 1, there will be some padding on the sides of the body text.) |
-| `body_line_spacing` | Spacing between lines of body text, as a percentage of the font size. |
-| `output_to_pdf` | 1 = create a pdf file |
-| `dpi` | Image resolution on the pdf |
+## Step 4: Arrange Cards into Layouts
 
-#### 2. Add foreground images
+Run the `layout_images.py` script to arrange the cards into an A4 grid layout:
 
-Place them in the `Images/Foregrounds` folder. They must all be .png
+```shell
+python layout_images.py --source Output --out layout --copies 2 --width 60 --height 90 --pad 10 --inner_pad 5
+```
 
-#### 3. Add background images.
+This will create:
 
-Place them in the `Images/Backgrounds` folder. They must all be .png
+- PNG layout files in the layout directory.
+- A combined PDF file (all_pages.pdf) in the same directory.
 
-#### 4. Add some words to cards.csv
+## Example Workflow
 
-See the example for the correct format. _Don't_ add file extensions (.png) to the image names
+1. Prepare your mycards.csv file and images.
+2. Configure config.ini with your settings.
+3. Run SVM_CardCreator.py to generate cards.
+4. Run layout_images.py to create printable layouts.
 
-## How to run the program
+### Output
 
-Run the following commands:
+- Cards: Individual PNG files in the Output directory.
+- Layouts: PNG files and a combined PDF in the layout directory.
+You're ready to print your custom cards!
 
-| Windows | OS X  and Linux |
-| --- | --- |
-| `cd /path/to/script` | `cd /path/to/script` |
-| `python CardCreator.py` | `./CardCreator.py` |
